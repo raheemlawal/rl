@@ -1,12 +1,12 @@
 import './App.css';
-import a from './miami-jm.JPG';
-import b from './desert-pink.jpeg';
-import c from './miami-rarity.JPG';
-import d from './vrc-jump.jpg';
-import e from './on-boardwalk.jpg'
-import f from './miami-gracious.JPG'
-import g from './boat.JPG'
-import h from './miami-kitboys.JPG'
+import a from './photos/miami-jm.JPG';
+import b from './photos/desert-pink.jpeg';
+import c from './photos/miami-rarity.JPG';
+import d from './photos/vrc-jump.jpg';
+import e from './photos/on-boardwalk.jpg'
+import f from './photos/miami-gracious.JPG'
+import g from './photos/boat.JPG'
+import h from './photos/miami-kitboys.JPG'
 
 import {Container, Row, Image, Col } from 'react-bootstrap';
 
