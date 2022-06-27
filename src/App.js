@@ -1,24 +1,56 @@
-import logo from './logo.svg';
 import './App.css';
+import a from './miami-jm.JPG';
+import b from './desert-pink.jpeg';
+import c from './miami-rarity.JPG';
+import d from './vrc-jump.jpg';
+import e from './on-boardwalk.jpg'
+import f from './miami-gracious.JPG'
+import g from './boat.JPG'
+import h from './miami-kitboys.JPG'
+
+import {Container, Row, Image, Col } from 'react-bootstrap';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className='App'>
+      <Row id='top-row'>
+        <h1 className = 'my-name'>RAHEEM LAWAL</h1>
+        <h6 className = 'my-name'>MODEL</h6>
+        <h6 className = 'my-name'>LOS ANGELES/MIAMI</h6>
+        <h6 className = 'my-name'>INQUIRIES: LAWALRAHEEM@GMAIL.COM</h6>
+      </Row>
+      <Col className='pics'>
+        <Row id="pics-row-one">
+            <Col id = "a1">
+              <Image src = {a} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
+            </Col>
+            <Col id = "b1">
+              <Image src = {b} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
+            </Col>
+            <Col id = "c1">
+              <Image src = {d} className = "img-responsive" alt = "Cinque Terre" width={375} height={375}/>
+            </Col>
+            <Col id = "d1">
+              <Image src = {h} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
+            </Col>
+        </Row>
+        <Row id="pics-row-one">
+            <Col id = "e1">
+              <Image src = {c} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
+            </Col>
+            <Col id = "f1">
+              <Image src = {e} className = "img-responsive" alt = "Cinque Terre" width={375} height={375}/>
+            </Col>
+            <Col id = "g1">
+              <Image src = {g} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
+            </Col>
+            <Col id = "h1">
+              <Image src = {f} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
+            </Col>
+        </Row>
+      </Col>
+    </Container>
   );
 }
 
