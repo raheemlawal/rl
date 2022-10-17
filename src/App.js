@@ -7,6 +7,10 @@ import e from './photos/on-boardwalk.jpg'
 import f from './photos/miami-gracious.JPG'
 import g from './photos/boat.JPG'
 import h from './photos/miami-kitboys.JPG'
+import i from './photos/hokafromback.JPG'
+import j from './photos/hokajump.JPG'
+import k from './photos/hokarunnoface.JPG'
+import l from './photos/hokaside.JPG'
 
 import {Container, Row, Image, Col } from 'react-bootstrap';
 
@@ -32,7 +36,7 @@ function App() {
               <Image src = {d} className = "img-responsive" alt = "Cinque Terre" width={375} height={375}/>
             </Col>
             <Col id = "d1">
-              <Image src = {h} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
+              <Image src = {l} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
             </Col>
         </Row>
         <Row id="pics-row-one">
@@ -47,6 +51,20 @@ function App() {
             </Col>
             <Col id = "h1">
               <Image src = {f} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
+            </Col>
+        </Row>
+        <Row id="pics-row-one">
+            <Col id = "i1">
+              <Image src = {i} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
+            </Col>
+            <Col id = "j1">
+              <Image src = {j} className = "img-responsive" alt = "Cinque Terre" width={375} height={375}/>
+            </Col>
+            <Col id = "k1">
+              <Image src = {k} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
+            </Col>
+            <Col id = "l1">
+              <Image src = {h} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
             </Col>
         </Row>
       </Col>
