@@ -4,7 +4,7 @@ import b from './photos/desert-pink.jpeg';
 import c from './photos/miami-rarity.JPG';
 import d from './photos/vrc-jump.jpg';
 import e from './photos/on-boardwalk.jpg'
-import f from './photos/miami-gracious.JPG'
+import f from './photos/lonelyheartsthrow.JPG'
 import g from './photos/boat.JPG'
 import h from './photos/miami-kitboys.JPG'
 import i from './photos/hokafromback.JPG'
@@ -66,7 +66,7 @@ function App() {
             <Col id = "l1">
               <Image src = {h} className = "img-responsive" alt = "Cinque Terre" width={300} height={375}/>
             </Col>
-        </Row>
+        </Row>  
       </Col>
     </Container>
   );
