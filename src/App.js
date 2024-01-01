@@ -21,7 +21,7 @@ function App() {
       <Row id='top-row'>
         <h1 className = 'my-name'>RAHEEM LAWAL</h1>
         <h6 className = 'my-name'>MODEL</h6>
-        <h6 className = 'my-name'>LOS ANGELES/MIAMI</h6>
+        <h6 className = 'my-name'>LOS ANGELES</h6>
         <h6 className = 'my-name'>INQUIRIES: LAWALRAHEEM@GMAIL.COM</h6>
       </Row>
       <Col className='pics'>
