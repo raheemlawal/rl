@@ -154,3 +154,74 @@ img{
   margin: 0;
   padding: 0;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .App {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .my-name {
+    margin-left: 4vw;
+    font-size: clamp(0.7rem, 4vw, 0.9rem);
+    margin-bottom: 0.5vh;
+  }
+  
+  #top-row {
+    padding: 1vh 0;
+  }
+  
+  .pics {
+    flex-direction: column;
+    padding: 1vh 4vw;
+    gap: 2vh;
+    max-height: none;
+    overflow: visible;
+  }
+  
+  .column-one,
+  .column-two,
+  .column-three {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    gap: 1vh;
+  }
+  
+  .column-one-img {
+    height: auto;
+    max-height: none;
+    aspect-ratio: 3/4;
+  }
+  
+  .column-two-grid {
+    gap: 1vh;
+    margin-bottom: 1vh;
+  }
+  
+  .column-three-grid {
+    gap: 1vh;
+    margin-bottom: 1vh;
+  }
+  
+  .grid-img,
+  .small-grid-img {
+    aspect-ratio: 1/1;
+    height: auto;
+  }
+}
+
+/* Tablet Responsive Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pics {
+    padding: 0.3vh 1vw;
+    gap: 0.5vw;
+  }
+  
+  .my-name {
+    margin-left: 1vw;
+  }
+}
