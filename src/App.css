@@ -155,12 +155,31 @@ img{
   padding: 0;
 }
 
+/* Mobile: single column, uniform tiles, full page scroll (desktop grid is hidden on small screens) */
+.pics-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  flex: 0 0 auto;
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+}
+
+.mobile-gallery-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .App {
     height: auto;
     min-height: 100svh;
     min-height: 100dvh;
+    max-height: none;
+    overflow-x: hidden;
     overflow-y: auto;
   }
   
@@ -172,55 +191,13 @@ img{
   
   #top-row {
     padding: 1vh 0;
-  }
-  
-  .pics {
-    flex-direction: column;
-    padding: 1vh 4vw;
-    gap: 2vh;
-    max-height: none;
-    overflow: visible;
-  }
-  
-  .column-one,
-  .column-two,
-  .column-three {
-    flex: 1;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    gap: 1vh;
-  }
-  
-  .column-one-img {
-    height: auto;
-    max-height: none;
-    aspect-ratio: 3/4;
-  }
-  
-  .column-two-grid {
-    flex: none;
-    gap: 1vh;
-    margin-bottom: 1vh;
-    overflow: visible;
-  }
-  
-  .column-three-grid {
-    flex: none;
-    gap: 1vh;
-    margin-bottom: 1vh;
-    overflow: visible;
+    flex-shrink: 0;
   }
 
-  .grid-item,
-  .small-grid-item {
-    min-height: auto;
-  }
-  
-  .grid-img,
-  .small-grid-img {
-    aspect-ratio: 1/1;
-    height: auto;
+  .pics-mobile {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 0.5vh;
   }
 }
 

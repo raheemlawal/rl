@@ -20,6 +20,26 @@ import t from './photos/KRE_8332.jpg'
 
 import {Container, Row, Image, Col, Modal } from 'react-bootstrap';
 
+/** Same order as desktop columns (left → right, top → bottom); `full` is what opens in the modal. */
+const galleryItems = [
+  { src: s, full: b },
+  { src: l, full: l },
+  { src: o, full: i },
+  { src: m, full: m },
+  { src: b, full: e },
+  { src: a, full: a },
+  { src: d, full: d },
+  { src: c, full: c },
+  { src: f, full: f },
+  { src: k, full: k },
+  { src: n, full: n },
+  { src: i, full: o },
+  { src: p, full: p },
+  { src: q, full: q },
+  { src: r, full: r },
+  { src: e, full: s },
+  { src: t, full: t },
+];
 
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -40,7 +60,7 @@ function App() {
         <h6 className = 'my-name'>INQUIRIES: HEY@ITSRAHEEM.COM</h6>
         <h6 className = 'my-name'>FEATURES: ON/CLASSPASS/HOKA</h6>
       </Row>
-      <Row className='pics'>
+      <Row className='pics d-none d-md-flex'>
         <Col className="column-one">
           <Image src = {s} className = "img-responsive column-one-img" alt = "Featured" onClick={() => handleImageClick(b)} style={{cursor: 'pointer'}}/>
           <Image src = {l} className = "img-responsive column-one-img" alt = "Featured" onClick={() => handleImageClick(l)} style={{cursor: 'pointer'}}/>
@@ -110,7 +130,27 @@ function App() {
         </Col>
       </Row>
 
-      <Modal show={selectedImage !== null} onHide={handleCloseModal} centered size="lg">
+      <div className="pics-mobile d-md-none" aria-label="Portfolio gallery">
+        {galleryItems.map((item, idx) => (
+          <Image
+            key={idx}
+            src={item.src}
+            loading="lazy"
+            className="mobile-gallery-img"
+            alt="Portfolio"
+            onClick={() => handleImageClick(item.full)}
+            style={{ cursor: 'pointer' }}
+          />
+        ))}
+      </div>
+
+      <Modal
+        show={selectedImage !== null}
+        onHide={handleCloseModal}
+        centered
+        size="lg"
+        fullscreen="md-down"
+      >
         <Modal.Body style={{padding: 0, backgroundColor: 'black'}}>
           {selectedImage && (
             <Image src={selectedImage} fluid style={{width: '100%', height: 'auto'}} />
