@@ -159,7 +159,8 @@ img{
 @media (max-width: 768px) {
   .App {
     height: auto;
-    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
     overflow-y: auto;
   }
   
@@ -198,13 +199,22 @@ img{
   }
   
   .column-two-grid {
+    flex: none;
     gap: 1vh;
     margin-bottom: 1vh;
+    overflow: visible;
   }
   
   .column-three-grid {
+    flex: none;
     gap: 1vh;
     margin-bottom: 1vh;
+    overflow: visible;
+  }
+
+  .grid-item,
+  .small-grid-item {
+    min-height: auto;
   }
   
   .grid-img,
